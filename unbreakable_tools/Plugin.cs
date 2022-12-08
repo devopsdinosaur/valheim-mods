@@ -40,6 +40,17 @@ public class Plugin : BaseUnityPlugin {
 					item.m_durability = item.GetMaxDurability();
 				}
 			}
+			__instance.m_swimStaminaDrainMinSkill = 0f;
+			__instance.m_swimStaminaDrainMaxSkill = 0f;
+		}
+	}
+
+	[HarmonyPatch(typeof(Character), "IsSwiming")]
+	class HarmonyPatch_Character_IsSwiming {
+
+		private static bool Prefix(ref bool __result) {
+			__result = false;
+			return false;
 		}
 	}
 }
