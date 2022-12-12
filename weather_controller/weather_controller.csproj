@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B02752A4-076A-4A11-9DFE-109FDA154A70}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>weather_controller</RootNamespace>
-    <AssemblyName>weather_controller</AssemblyName>
+    <RootNamespace>devopsdinosaur.valheim.weather_controller</RootNamespace>
+    <AssemblyName>devopsdinosaur.valheim.weather_controller</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

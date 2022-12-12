@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B02752A4-076A-4A11-9DFE-109FDA154B7F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>no_death_animations</RootNamespace>
-    <AssemblyName>no_death_animations</AssemblyName>
+    <RootNamespace>devopsdinosaur.valheim.no_death_animations</RootNamespace>
+    <AssemblyName>devopsdinosaur.valheim.no_death_animations</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

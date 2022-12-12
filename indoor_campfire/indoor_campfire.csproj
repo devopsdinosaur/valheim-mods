@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B02752A4-076A-4A11-9DFE-109FDA154B8D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>inside_campfire</RootNamespace>
-    <AssemblyName>inside_campfire</AssemblyName>
+    <RootNamespace>devopsdinosaur.valheim.inside_campfire</RootNamespace>
+    <AssemblyName>devopsdinosaur.valheim.inside_campfire</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

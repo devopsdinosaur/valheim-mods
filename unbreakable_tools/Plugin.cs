@@ -41,15 +41,17 @@ public class Plugin : BaseUnityPlugin {
 					item.m_durability = item.GetMaxDurability();
 				}
 			}
-			foreach (GameObject obj in ___m_buildPieces.m_pieces) {
-				Piece piece = obj.GetComponent<Piece>();
-				if (piece != null) {
-					piece.m_groundOnly = false;
-					piece.m_noInWater = false;
-					piece.m_notOnWood = false;
-					piece.m_notOnTiltingSurface = false;
-					piece.m_notOnFloor = false;
-					piece.m_noClipping = false;
+			if (___m_buildPieces != null) {
+				Piece piece;
+				foreach (GameObject obj in ___m_buildPieces.m_pieces) {
+					if (obj != null && (piece = obj.GetComponent<Piece>()) != null) {
+						piece.m_groundOnly = false;
+						piece.m_noInWater = false;
+						piece.m_notOnWood = false;
+						piece.m_notOnTiltingSurface = false;
+						piece.m_notOnFloor = false;
+						piece.m_noClipping = false;
+					}
 				}
 			}
 		}
