@@ -22,7 +22,6 @@ public class Plugin : BaseUnityPlugin {
 	}
 
 	private void Start() {
-
 	}
 
 	[HarmonyPatch(typeof(Player), "FixedUpdate")]
@@ -31,7 +30,7 @@ public class Plugin : BaseUnityPlugin {
 		const float CHECK_FREQUENCY = 1.0f;
 		static float m_elapsed = 0f;
 
-		private static void Postfix(ref Player __instance, ref Inventory ___m_inventory, ref PieceTable ___m_buildPieces) {
+		private static void Postfix(ref Player __instance, ref Inventory ___m_inventory) {
 			if (__instance != Player.m_localPlayer || (m_elapsed += Time.fixedDeltaTime) < CHECK_FREQUENCY) {
 				return;
 			}
@@ -39,19 +38,6 @@ public class Plugin : BaseUnityPlugin {
 			foreach (ItemDrop.ItemData item in ___m_inventory.GetAllItems()) {
 				if (item.IsEquipable()) {
 					item.m_durability = item.GetMaxDurability();
-				}
-			}
-			if (___m_buildPieces != null) {
-				Piece piece;
-				foreach (GameObject obj in ___m_buildPieces.m_pieces) {
-					if (obj != null && (piece = obj.GetComponent<Piece>()) != null) {
-						piece.m_groundOnly = false;
-						piece.m_noInWater = false;
-						piece.m_notOnWood = false;
-						piece.m_notOnTiltingSurface = false;
-						piece.m_notOnFloor = false;
-						piece.m_noClipping = false;
-					}
 				}
 			}
 		}

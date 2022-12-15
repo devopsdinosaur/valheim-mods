@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "underwater_walking", "under
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weather_controller", "weather_controller\weather_controller.csproj", "{B02752A4-076A-4A11-9DFE-109FDA154A70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "debugging", "debugging\debugging.csproj", "{B02752A4-076A-4A11-9DFE-209FDA154B7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "headlight", "headlight\headlight.csproj", "{B02752A4-076A-4A11-9DFE-209FDA154B70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{B02752A4-076A-4A11-9DFE-109FDA154A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B02752A4-076A-4A11-9DFE-109FDA154A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B02752A4-076A-4A11-9DFE-109FDA154A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02752A4-076A-4A11-9DFE-209FDA154B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02752A4-076A-4A11-9DFE-209FDA154B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02752A4-076A-4A11-9DFE-209FDA154B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02752A4-076A-4A11-9DFE-209FDA154B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02752A4-076A-4A11-9DFE-209FDA154B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02752A4-076A-4A11-9DFE-209FDA154B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02752A4-076A-4A11-9DFE-209FDA154B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02752A4-076A-4A11-9DFE-209FDA154B70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

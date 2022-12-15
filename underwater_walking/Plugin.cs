@@ -23,20 +23,25 @@ public class Plugin : BaseUnityPlugin {
 	private void Start() {
 	}
 
-    [HarmonyPatch(typeof(Character), "IsSwiming")]
-    class HarmonyPatch_Character_IsSwiming {
+    [HarmonyPatch(typeof(SEMan), "Internal_AddStatusEffect")]
+    class HarmonyPatch_SEMan_AddStatusEffect {
 
-        private static bool Prefix(ref bool __result) {
-            __result = false;
-            return false;
+        private static bool Prefix(ref SEMan __instance, string name) {
+            if (name == "Wet") {
+                return false;
+            }
+            return true;
         }
     }
 
-    [HarmonyPatch(typeof(GameCamera), "UpdateNearClipping")]
-    class HarmonyPatch_GameCamera_UpdateNearClipping {
+    [HarmonyPatch(typeof(Character), "IsSwiming")]
+    class HarmonyPatch_Character_InLiquidWetDepth {
 
-        private static bool Prefix(ref GameCamera __instance) {
-            //__instance.GetType().GetTypeInfo().GetProperty("m_waterClipping").SetValue(null, false);
+        private static bool Prefix(ref Character __instance, ref bool __result) {
+            if (__instance == Player.m_localPlayer) {
+                __result = false;
+                return false;
+            }
             return true;
         }
     }
