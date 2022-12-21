@@ -22,7 +22,6 @@ public class Plugin : BaseUnityPlugin {
 	}
 
 	private void Start() {
-
 	}
 
 	[HarmonyPatch(typeof(Player), "FixedUpdate")]
@@ -83,6 +82,16 @@ public class Plugin : BaseUnityPlugin {
 				args.Context?.AddString("Hey something is working!");
 
 			}, isCheat: false, isNetwork: false, onlyServer: false, isSecret: true);
+		}
+	}
+
+	[HarmonyPatch(typeof(CreatureSpawner), "Spawn")]
+	class HarmonyPatch_CreatureSpawner_Spawn {
+
+		private static void Postfix(ref CreatureSpawner __instance, ZNetView __result) {
+			Character character = __result.gameObject.GetComponent<Character>();
+			logger.LogInfo("CreatureSpawner::Spawn() - minLevel: " + __instance.m_minLevel + ", maxLevel: " + __instance.m_maxLevel);
+			logger.LogInfo("   --> name: " + character.m_name + ", level: " + character.GetLevel());
 		}
 	}
 }
