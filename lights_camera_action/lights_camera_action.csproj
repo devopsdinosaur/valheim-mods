@@ -36,7 +36,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Plugin.cs" />
+    <Compile Include="LightsCameraActionPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="0Harmony">

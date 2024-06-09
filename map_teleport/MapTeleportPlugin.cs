@@ -7,18 +7,17 @@ using UnityEngine.UI;
 using System.Reflection;
 using System;
 
-
 [BepInPlugin("devopsdinosaur.valheim.map_teleport", "Map Teleport", "0.0.1")]
-public class Plugin : BaseUnityPlugin {
+public class MapTeleportPlugin : BaseUnityPlugin {
 
 	private Harmony m_harmony = new Harmony("devopsdinosaur.valheim.map_teleport");
 	public static ManualLogSource logger;
 
-	public Plugin() {
+	public MapTeleportPlugin() {
 	}
 
 	private void Awake() {
-		Plugin.logger = this.Logger;
+		MapTeleportPlugin.logger = this.Logger;
 		logger.LogInfo((object) "devopsdinosaur.valheim.map_teleport v0.0.1 loaded.");
 		this.m_harmony.PatchAll();
 	}
